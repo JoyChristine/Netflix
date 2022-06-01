@@ -23,12 +23,29 @@
             id="logo"
             class="logo"
           />
-           
-            <div class="navbar ms-auto" id="navbarResponsive">
-             <button id="sign-in">Sign In</button>
-              
-            </div>
+          {% if user.is_authenticated %}
+          <div class="navbar ms-auto" id="navbarResponsive">
             
+              <a href="#" id="user-btn" class=" btn btn-default"  role="button" aria-expanded="false">{{user.username}}
+             &nbsp;
+                <a href="/logout" id="user-logout" class=" btn btn-default">Logout</a>
+             
+           </div>
+           
+           
+           
+          
+            {% else %}
+            <div class="navbar ms-auto" id="navbarResponsive">
+              <button id="sign-in">
+               <a class='btn btn-default' href="/accounts/login">Sign In</a>
+                </button>
+              
+               
+             </div>
+             
+           
+            {% endif %}
          
        
         </nav>
@@ -43,8 +60,10 @@
               membership .
             </p>
               <button class="sign-up" id="sign-up">
-                Sign Up
+                <a class='btn btn-default' href="/accounts/register"> Sign Up</a>
+               
               </button>
+              
             </div>
           </div>
         
