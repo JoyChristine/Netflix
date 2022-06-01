@@ -1,0 +1,67 @@
+#main{
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.6)),url(../img/netflix.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    padding: 1vw 4vw 1vw 4vw;
+    
+    
+}
+#sign-in{
+    color:#fff;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    background-color: #e50914;
+    line-height: normal;
+    padding:0.8vw 1.5vw;
+    border-radius:0.7vw;
+    border: none;
+    font-weight: 400;
+   
+   
+    font-size: 1rem;
+   
+}
+#logo{
+    width:12vw;
+    height:4vw;
+}
+#shows{
+    color: #fff;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    gap:1vw;
+    padding-top: 10.5%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+  
+  
+}
+#shows h1{
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 3.9vw;
+    font-weight:900;
+}
+#shows .subtitle{
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:2vw;
+    font-weight:500;
+}
+#shows .desc{
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size:1.5vw;
+    font-weight:300;
+}
+#sign-up{
+    color:#fff;
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    background-color: #e50914;
+    line-height: normal;
+    padding:0.8vw 1.5vw;
+    border-radius:0.7vw;
+    border: none;
+    font-weight: 400;
+    align-self: center;
+   width: 30%;
+    font-size: 1rem;
+}
