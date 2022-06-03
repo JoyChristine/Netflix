@@ -1,10 +1,10 @@
 #main{
-    background-image: linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.6)),url(../img/netflix.jpg);
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.8),rgba(0,0,0,.8)),url(../img/netflix.jpg);
     background-size: cover;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-position: center;
-    height: 100vh;
-    padding: 1vw 4vw 1vw 4vw;
+    height: 100%;
+    padding: 1vw 1vw 1vw 1vw;
     
     
 }
@@ -37,6 +37,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
+    height:100vh;
   
   
 }
@@ -97,7 +98,7 @@
     align-self: center;
 }
 #login,#register{
-    background-image: linear-gradient(to bottom,rgba(0,0,0,.6),rgba(0,0,0,.6)),url(../img/netflix.jpg);
+    background-image: linear-gradient(to bottom,rgba(0,0,0,.7),rgba(0,0,0,.7)),url(../img/netflix.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -106,7 +107,9 @@
     color: #fff;
 }
 #col-login,#col-register{
-    background-color: #080808;
+    background-color:#000;
+    opacity: 0.8;
+   
     margin-top: 6.5%;
    
     
@@ -114,25 +117,109 @@
     
 }
 #form-login,#form-register{
-   
-    display: inline-block;
+    display: block;
+    
     
     padding: 3vw 3vw 3vw 4vw;
     
 }
-input {
-    color: rgb(226, 10, 10);
+#form-register .helptext{
+    display:none;
 }
-#login-btn{
+#login-btn,#signup{
     color:#fff;
     font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
     background-color: #e50914;
     line-height: normal;
-    padding:0.8vw 1.5vw;
+    padding:1.4vw 1.5vw;
     border-radius:0.7vw;
     border: none;
     font-weight: 400;
-    align-self: center;
-   width: 90%;
+    
+    align-items: center;
+    width: 100%;
     font-size: 1rem;
+}
+#id_username,#id_password,#id_email,#id_password1,#id_password2{
+    background-color: #333;
+    display:table;
+    padding: 2% 2%;
+
+    width:100%;
+    border:none;
+    outline:none;
+    border-radius:0.3vw;
+    /* margin:1.3vw; */
+    color: #8c8c8c;
+        
+}
+/* #form-login{
+        background-color: rgb(209, 202, 202);;
+        outline: none;
+        border: none;
+        border-bottom: solid 0.05vw #fff;
+        padding: 2% 2%;
+        margin:1.3vw;
+        color: red;
+        font-size: 0.9vw;
+} */
+
+
+#trend{
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 1.8vw;
+    /* text-align: center; */
+    font-weight:300;
+    /* background-image: linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.9)),url(../img/netflix.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 2vw;
+    padding-bottom: 2vw;
+    color: rgb(255, 255, 255);
+   
+}
+#trending{
+    top:0;
+    /* margin-top:-3vw; */
+    color: rgb(0, 0, 0);
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    /* background-image: linear-gradient(to bottom,rgba(0,0,0,.9),rgba(0,0,0,.9)),url(../img/netflix.jpg); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    
+    color: #fff;
+  
+  
+}
+#trending-card{
+    width:24vw ;
+    border:none;
+    background:none;
+    
+
+}
+#trending img {
+    width: 24vw;
+    height: 29vw;
+    gap:2%;
+    padding: 1vw;
+}
+#title{
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 1.3vw;
+    text-align: center;
+    font-weight:300;
+}
+#rate{
+    font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-size: 1.3vw;
+    text-align: center;
+    font-weight:300;
 }

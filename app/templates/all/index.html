@@ -29,8 +29,10 @@
               <a href="#" id="user-btn" class=" btn btn-default"  role="button" aria-expanded="false">{{user.username}}
              &nbsp;
                 <a href="/logout" id="user-logout" class=" btn btn-default">Logout</a>
-             
+                
            </div>
+           
+
            
            
            
@@ -38,7 +40,7 @@
             {% else %}
             <div class="navbar ms-auto" id="navbarResponsive">
               <button id="sign-in">
-               <a class='btn btn-default' href="/accounts/login">Sign In</a>
+               <a class='btn btn-default' href="{% url 'login'%}">Sign In</a>
                 </button>
               
                
@@ -49,23 +51,43 @@
          
        
         </nav>
-        <div class="shows" id="shows">
-            <h1 class="shows-title">
-              Unlimited Movies TV,<br />
-              Shows and More.
-            </h1>
-            <p class="subtitle">Watch anywhere and cancel anytime.</p>
-            <p class="desc">
-              Ready to watch? Enter your email to create or restart your
-              membership .
-            </p>
-              <button class="sign-up" id="sign-up">
-                <a class='btn btn-default' href="/accounts/register"> Sign Up</a>
-               
-              </button>
-              
-            </div>
+        {% if user.is_authenticated %}
+        <h1 id="trend">Trending</h1>
+        <div class="trending" id="trending">
+        
+        <br>
+            {%for movie in movies%}
+          <div class="card" id="trending-card">
+            
+
+            <img src="https://image.tmdb.org/t/p/w500/{{movie.poster_path}}" alt="{{movie.title}}" class="movie-poster">
+            <h1 id="title">{{movie.original_name}}</h1>
+            <h1 id="title">{{movie.original_title}}</h1>
+            <p id="rate">Rating : {{movie.vote_average}}</p>
           </div>
+            
+  
+    {%endfor%}
+        {%else%}
+        <div class="shows" id="shows">
+          <h1 class="shows-title">
+            Unlimited Movies TV,<br />
+            Shows and More.
+          </h1>
+          <p class="subtitle">Watch anywhere and cancel anytime.</p>
+          <p class="desc">
+            Ready to watch? Enter your email to create or restart your
+            membership .
+          </p>
+            <button class="sign-up" id="sign-up">
+              <a class='btn btn-default' href="/accounts/register"> Sign Up</a>
+             
+            </button>
+            
+          </div>
+        </div>
+        {%endif%}
+        
         
     </main>
     {%endblock%}
